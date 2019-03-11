@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> Bremsweg </title>
+<meta charset="utf8">
+<style>
+	table {background-color: mediumturquoise; margin: 20px; width: 99%
+	}
+</style>
+<body>
+	<h1>Diese Tabelle zeigt dir den Bremsweg bei trockener Fahrbahn.</h1>
+	
+	<table border="1px" class="tabelle">
+	
+	<tr><td>Geschwindigkeit(km/h)</td><td>Anhalteweg(m)</td></tr>
+	
+	<script>
+	for (var v = 10; v<1000; v+=10) {
+		
+		var reaktion = v/10*3;
+		var brems = (v/10)*(v/10);
+		var s = brems + reaktion
+		
+		document.write("<tr>");
+		document.write("<td>"+v+"</td>");
+		document.write("<td>"+s+"</td>");
+		document.write("</tr>");
+		
+	}
+	</script>
+
+	
+	
+	</table>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="utf8">
+<title> Zahlenraten </title>
+
+<script>
+function spiel() {
+	var zz = Math.random()*100
+	zz = Math.round(zz);
+	var Versuche = 0;
+	var erraten = false;
+	
+	while (erraten == false){
+		x = 0;
+		
+		var geraten = prompt ("Errate eine Zahl zwischen 1 und 100!");
+		
+		if (geraten < zz) {
+			alert ("Zu klein!");
+			Versuche++;
+		}
+		else if (geraten > zz) {
+			alert ("Zu groß!");
+			Versuche++;
+		}
+		else {
+			alert ("Richtig!");
+			Versuche++;
+			alert ("Du hast nur "+Versuche+" Versuche gebraucht");
+			erraten = true;
+		}
+	}
+}
+	
+	
+
+
+
+</script>
+</head>
+<body>
+<input type="button" value="Jetzt spielen" onclick="spiel()">
+
+
+
+
+</body>
+</html>

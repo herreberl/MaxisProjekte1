@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta charset = "utf8">
+<title> Funktionen </title>
+
+	<style>
+		.tabelle {border-style: groove; background-color: mediumturquoise; border-width: 12
+		}
+	
+	</style>
+
+	<script>
+	function Kommunismus(){
+		var stalin = [0,1,2,3,4,5];
+		var joseph = 0;
+		
+		for (i=1;i<6;i+=2){
+		joseph=stalin[i-1];
+		stalin[i-1]=stalin[i];
+		stalin[i]=joseph;
+		
+		}
+		document.getElementById("ausgabe").innerHTML =stalin
+		}
+		function addition () {
+		var wert1 = document.getElementById("zahl1").value;
+		wert1 = parseInt(wert1)
+		var wert2 = document.getElementById("zahl2").value;
+		wert2 = parseInt(wert2)
+		var ergebnis = wert1 + wert2;
+		document.getElementById("ausgabe").innerHTML = ergebnis;
+		}
+		
+		function subtraktion () {
+		var wert1 = document.getElementById("zahl1").value;
+		wert1 = parseInt(wert1)
+		var wert2 = document.getElementById("zahl2").value;
+		wert2 = parseInt(wert2)
+		var ergebnis = wert1 - wert2;
+		document.getElementById("ausgabe").innerHTML = ergebnis;
+		}
+		
+		function division () {
+		var wert1 = document.getElementById("zahl1").value;
+		wert1 = parseInt(wert1)
+		var wert2 = document.getElementById("zahl2").value;
+		wert2 = parseInt(wert2)
+		var ergebnis = wert1 / wert2;
+		document.getElementById("ausgabe").innerHTML = ergebnis;
+		}
+		
+		function multiplikation () {
+		var wert1 = document.getElementById("zahl1").value;
+		wert1 = parseInt(wert1)
+		var wert2 = document.getElementById("zahl2").value;
+		wert2 = parseInt(wert2)
+		var ergebnis = wert1 * wert2;
+		document.getElementById("ausgabe").innerHTML = ergebnis;
+		}
+		
+		function gradinbogenmass () {
+		var grad = document.getElementById("grad").value;
+		grad = parseFloat(grad)
+		var ergebnis = grad*Math.PI/180
+		document.getElementById("ausgabe0").innerHTML = ergebnis;
+		}
+		
+		function bogenmassingrad () {
+		var rad = document.getElementById("rad").value;
+		rad = parseFloat(rad)
+		var ergebnis = rad*180/Math.PI
+		document.getElementById("ausgabe0").innerHTML = ergebnis;
+		}
+		
+	</script>
+<body>
+	<h1> Grundrechenoperationen </h1>
+	
+	<table class="tabelle">
+	<tr> <td> <input type="text" id="zahl1"> </td>
+	<td> <input type="text" id="zahl2"> <br> </td> </tr>
+	<tr> <td> <input type="button" value="Stalin?" onclick="Kommunismus()"> <input type="button" value="+" onclick="addition()"></td>
+	<td> <input type="button" value="-" onclick="subtraktion ()"> </td> </tr>
+	<tr> <td> <input type="button" value=":" onclick="division ()"> </td>
+	<td> <input type="button" value="*" onclick="multiplikation ()"> </td> </tr>
+	</table>
+	
+	<p id="ausgabe"> zack </p>
+	
+	<h1> Grad in Bogenmaß </h1>
+	<table class="tabelle">
+	<tr> <td> Grad </td> 
+	<td> <input type="text" id="grad"> </td>
+	<td> <input type="button" value="In Bogenmaß umrechnen" onclick="gradinbogenmass ()"> </td> </tr>
+	<tr> <td> Bogenmaß </td>
+	<td> <input type="text" id="rad"> </td>
+	<td> <input type="button" value="In Grad umrechen" onclick="bogenmassingrad ()"> </td> </tr>
+	</table>
+	
+	<p id="ausgabe0">  </p>
+	
+</body>
+</html>

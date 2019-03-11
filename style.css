@@ -1,0 +1,39 @@
+.zack {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 3;
+  background-color: black;
+  border: solid;
+  border-color: #01DF01;
+  border-width: thin;
+  padding: 20px;
+}
+
+
+  body {
+    background-color: #000000;
+  }
+
+  @font-face {
+    font-family: "MyFont";
+    src: url(computer-robot/COMPUTERRobot.ttf) format('truetype');
+
+  }
+  @font-face {
+    font-family: "MyFont1";
+    src: url(data-control/data-latin.ttf) format('truetype');
+  }
+
+  p {
+    color: #01DF01;
+    font-family: MyFont1;
+    font-size: large;
+    z-index: 2;
+  }
+
+  h1 {
+    color: #01DF01;
+    font-family: MyFont;
+    font-size: 60px;
+  }

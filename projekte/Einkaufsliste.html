@@ -1,0 +1,44 @@
+<html>
+<head>
+<meta charset="utf8">
+<title>Einkaufsliste</title>
+<script>
+
+	var Liste = [];
+	
+	function hinzufuegen() {
+		var eintrag = document.getElementById("zack").value;
+		Liste[Liste.length] = eintrag;
+		
+		ausgabe();
+	}
+	
+	function ausgabe() {
+		var Ausgabe = "Deine Liste besteht aus: <br>";
+		for (var p = 0; p < Liste.length;p++) {
+			Ausgabe += Liste[p]+"<br>";
+			document.getElementById("ausgabe").innerHTML = Ausgabe;
+		}
+	}
+	
+	function sortieren() {
+		Liste.sort();
+		ausgabe();
+	}
+
+
+</script>
+</head>
+<body>
+
+	<h1>Einkaufsliste</h1>
+	
+	<input type="text" id="zack">
+	<input type="button" value="hinzufügen" onclick="hinzufuegen()">
+	<input type="button" value="sortieren" onclick="sortieren()">
+	
+	<p id="ausgabe"> Deine Liste ist leer </p>
+
+
+</body>
+</html>

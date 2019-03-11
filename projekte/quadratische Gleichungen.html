@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf8">
+	<title> ... </title>
+	<script>
+	
+		function diskriminanteberechnen() {
+		var p = document.getElementById("p").value;
+		p = parseInt(p)
+		var q = document.getElementById("q").value;
+		q = parseInt(q)
+		var diskriminante = (p/2)*(p/2)-q
+		
+		if (diskriminante > 0) {
+			var ergebnis1 = -p/2+diskriminante
+			var ergebnis2 = -p/2+diskriminante
+			alert("Erstes Ergebnis:"+ergebnis1+" Zweites Ergebnis:"+ergebnis2+")
+		}
+		if (diskriminante == 0) {
+			alert("Die Diskriminante ist gleich 0")
+		}
+		if (diskriminante < 0) {
+			alert("Die Diskriminante ist kleinenr als 0")
+		}}
+		
+	
+	</script>
+</head>
+<body>
+<h1>Kleine Lösungsformel für quadratische Gleichungen</h1>
+
+x²+<input type="text" style="width:40" id="p">+<input type="text" style="width:40" id="q">=0
+
+<input type="button" value="berechnen" onclick="diskriminanteberechnen()">
+
+</body>
+</html>
