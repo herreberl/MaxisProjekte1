@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cäsarverschlüsselung</title>
+    <script>
+      function zack() {
+
+        var schluessel = parseInt(document.getElementById("schluessel").value);
+        var eingabe = document.getElementById("eingabe").value;
+        var ergebnis = "";
+
+        for (var i = 0; i < eingabe.length; i++) {
+          var neu = eingabe.charCodeAt(i);
+          neu += schluessel;
+          ergebnis += String.fromCharCode(neu);
+        }
+        document.getElementById("ausgabe").innerHTML= ergebnis;
+      }
+    function k() {
+        var schluessel = parseInt(document.getElementById("schluessel1").value);
+        var eingabe = document.getElementById("eingabe1").value;
+        var entschluesselt = "";
+
+        for (var i = 0; i < eingabe.length; i++) {
+          var neu = eingabe.charCodeAt(i);
+          neu -= schluessel;
+          entschluesselt += String.fromCharCode(neu);
+        }
+        document.getElementById("ausgabe1").innerHTML= entschluesselt;
+    }
+
+    </script>
+  </head>
+  <body>
+    <h1> Cäsar-Verschlüsselung </h1>
+    <h2> Verschlüsseln: </h2>
+    Schlüssel: <input type="number" id="schluessel"> <br> <br>
+    <textarea id="eingabe" rows="4" cols="30"> </textarea> <br> <br>
+    <input type="button" value="verschlüsseln" onclick="zack()"> <br>
+    <p id="ausgabe"> </p>
+    <h2> Entschlüsseln: </h2>
+    Schlüssel: <input type="number" id="schluessel1"> <br> <br>
+    <textarea id="eingabe1" rows="4" cols="30"> </textarea> <br> <br>
+    <input type="button" value="entschlüsseln" onclick="k()"> <br> <br>
+    <p id="ausgabe1"> </p>
+  </body>
+</html>
