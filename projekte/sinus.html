@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="p5.js"> </script>
+    <script>
+      var x = 0;
+      var y = 250;
+      var x1= 0;
+      var y1 = 0;
+
+      function setup(){
+        createCanvas(window.innerWidth, window.innerHeight);
+        background("pink");
+        strokeWeight(5);
+      }
+      function draw(){
+        x+=1.517;
+        y = 500/2+Math.sin(x/window.innerWidth*Math.PI*2)*-150;
+        point(x,y);
+        for (var i = 0; i<100; i++){
+          x1=Math.random()*window.innerWidth;
+          y1=Math.random()*window.innerHeight;
+          if(y1<500/2+Math.sin(x1/window.innerWidth*Math.PI*2)*-150){
+            stroke("black")
+          }
+          else{
+            stroke("yellow")
+          }
+        point(x1,y1)
+        }
+
+      }
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
